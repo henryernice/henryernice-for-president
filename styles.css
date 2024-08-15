@@ -10,3 +10,13 @@ p {
     text-align: center;
     font-size: 30px;
 }
+
+@font-face { font-family: Skøn; src: url('Smuk\ skrift.ttf'); } 
+@font-face { font-family: Comic-sans; src: url('Comic\ Sans\ MS.ttf'); } 
+
+
+button {
+    background-color: white;
+    padding: 0px;
+    border: 0;
+};

@@ -1,5 +1,6 @@
 
 var r = 0.0;
+let funkActivated = false
 
 function process() {
     let wheel = document.getElementById("wheel");
@@ -12,5 +13,14 @@ function process() {
     wheel.style.transform = "rotate("+r+"deg)";
 }
 
+
+function changeFont() {
+    let body = document.getElementById("body");
+    body.style.fontFamily = "comic-sans";
+    if (funkActivated) {
+        body.style.fontFamily = "skøn";
+    }
+    funkActivated = true;
+}
 
 setInterval(process, 10);
