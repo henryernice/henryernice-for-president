@@ -1,6 +1,6 @@
 
 var r = 0.0;
-let funkActivated = false
+let funkActivated = 0
 
 function process() {
     let wheel = document.getElementById("wheel");
@@ -16,11 +16,21 @@ function process() {
 
 function changeFont() {
     let body = document.getElementById("body");
-    body.style.fontFamily = "comic-sans";
+    body.style.fontFamily = "sans-serif";
+    funkActivated++;
     if (funkActivated) {
-        body.style.fontFamily = "skøn";
+        body.style.fontFamily = "comic-sans";
     }
-    funkActivated = true;
+    if (funkActivated == 2) {
+        body.style.fontFamily = "skøn";
+        funkActivated = -1;
+    }
+
+}
+
+function funkItUpBaby(){
+    document.getElementById("overlay").hidden = false;
+    document.getElementById("body").style.backgroundColor = "#9fff8c"
 }
 
 setInterval(process, 10);
