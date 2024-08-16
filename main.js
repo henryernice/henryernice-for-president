@@ -1,6 +1,7 @@
 
 var r = 0.0;
-let funkActivated = 0
+let funkActivated = 0;
+let text = "VOTE HENRY FOR PRESIDENT! VOTE HENRY FOR PRESIDENT! VOTE HENRY FOR PRESIDENT! VOTE HENRY FOR PRESIDENT! VOTE HENRY FOR PRESIDENT! VOTE HENRY FOR PRESIDENT! VOTE HENRY FOR PRESIDENT! VOTE HENRY FOR PRESIDENT! VOTE HENRY FOR PRESIDENT! VOTE HENRY FOR PRESIDENT! ";
 
 function process() {
     let wheel = document.getElementById("wheel");
@@ -11,6 +12,10 @@ function process() {
     wheel.style.marginTop = (22.5-size/2)+"%";
     wheel.style.marginBottom = (-size/2)+"%";
     wheel.style.transform = "rotate("+r+"deg)";
+    let texLen = text.length/6+1;
+    let newtext = text.slice((r/20)%texLen, texLen+(r/20)%texLen);
+    document.getElementById("title").innerText = newtext;
+    console.log(newtext);
 }
 
 
@@ -25,6 +30,7 @@ function changeFont() {
         body.style.fontFamily = "skøn";
         funkActivated = -1;
     }
+    let title = document.getElementById("title");
 
 }
 
