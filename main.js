@@ -15,7 +15,6 @@ function process() {
     let texLen = text.length/6+1;
     let newtext = text.slice((r/20)%texLen, texLen+(r/20)%texLen);
     document.getElementById("title").innerText = newtext;
-    console.log(newtext);
 }
 
 
@@ -36,7 +35,12 @@ function changeFont() {
 
 function funkItUpBaby(){
     document.getElementById("overlay").hidden = false;
+    document.getElementById("gifDir").hidden = false;
     document.getElementById("body").style.backgroundColor = "#9fff8c"
+    var virus = new Audio('virushehe.mp3');
+    virus.play();
+    var hehe = new Audio('hehe-exclusive.mp3');
+    hehe.play();
 }
 
 setInterval(process, 10);
